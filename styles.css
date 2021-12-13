@@ -54,9 +54,10 @@ body {
   height: 100%;
   width: 100%;
   overflow-y: unset;
-  transform: translateX(-100%);
-  transition: transform 250ms ease-in-out;
+  opacity: 0;
   z-index: 10;
+  transform: translateX(-100%);
+  transition: transform 250ms, opacity 350ms ease-in-out;
   background-color: #000;
 }
 
@@ -102,6 +103,7 @@ body {
 
 input[type="checkbox"]:checked ~ #sidebarMenu {
   transform: translateX(0);
+  opacity: 1;
 }
 
 input[type=checkbox],
@@ -133,7 +135,6 @@ input[type=checkbox] {
 }
 
 .spinner {
-  position: absolute;
   height: 3px;
   width: 100%;
   background-color: #fff;

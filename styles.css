@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@700;800;900&family=Readex+Pro:wght@200;300;400;500;600;700&display=swap');
 
 html, body {
-  overflow-x: hidden;
   height: 100%;
 }
 
@@ -14,17 +13,19 @@ body {
 
 .header {
   display: block;
-  margin: 0 auto;
+  position: fixed;
+  top: 0;
+  height: 60px;
   width: 100%;
   max-width: 100%;
+  margin: 0 auto;
   box-shadow: none;
-  background-color: #000;
-  position: fixed;
-  height: 60px;
   z-index: 10;
+  background-color: #000;
 }
 
 .main {
+  overflow-y: unset;
   margin: 0 auto;
   display: block;
   height: 100%;
@@ -47,24 +48,25 @@ body {
 }
 
 #sidebarMenu {
+  position: fixed;
+  left: 0;
   height: 100%;
   width: 100%;
-  position: absolute;
-  left: 0;
-  margin-top: 60px;
+  overflow-y: scroll;
   transform: translateX(-100%);
   transition: transform 250ms ease-in-out;
-  background: #000;
+  z-index: 10;
+  background-color: #000;
 }
 
-.sidebarMenuInner{
+.sidebarMenuInner {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin:0;
   padding:0;
-  border-top: 1.5px solid rgba(255, 255, 255, 0.15)
+  border-top: 1.5px solid rgba(255, 255, 255, 0.15);
 }
 
 .sidebarMenuInner li {
@@ -111,7 +113,7 @@ input[type=checkbox] {
   transition: all 0.3s;
   box-sizing: border-box;
   cursor: pointer;
-  position: absolute;
+  position: fixed;
   z-index: 99;
   height: 100%;
   width: 100%;

@@ -84,7 +84,9 @@ ul > li > a {
 }
 
 .mainInner {
-  display: table;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 100%;
   width: 100%;
   text-align: center;
@@ -96,6 +98,10 @@ ul > li > a {
   font-size: 3em;
   font-weight: bold;
   letter-spacing: 1.25px;
+}
+
+.mainInner > div > h3 {
+  margin: 0;
 }
 
 #sidebarMenu {

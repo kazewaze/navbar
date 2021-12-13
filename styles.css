@@ -12,6 +12,19 @@ body {
   background-color: #fff;
 }
 
+footer {
+  text-align: center;
+  margin: 0;
+  padding: 26px;
+  color: #000;
+  background-color: #eaeaea;
+}
+
+footer > h1 {
+  margin: 0;
+  font-size: 26px;
+}
+
 ul > li > a {
   text-decoration: none;
 }

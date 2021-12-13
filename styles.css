@@ -12,8 +12,14 @@ body {
   background-color: #fff;
 }
 
-.header {
-  display: block;
+ul > li > a {
+  text-decoration: none;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   position: fixed;
   top: 0;
   height: 60px;
@@ -23,6 +29,37 @@ body {
   box-shadow: none;
   z-index: 10;
   background-color: #000;
+}
+
+.nav-logo {
+  height: 45px;
+  width: 45px;
+  margin: 0 26px;
+}
+
+.nav-links {
+  display: flex;
+}
+
+@media (max-width: 750px) {
+  .nav-links {
+    display: none;
+  }
+}
+
+.nav-links > li {
+  margin-right: 26px;
+  list-style-type: none;
+}
+
+.nav-links > li > a {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.nav-links > li > a:hover {
+  color: #eaeaea;
 }
 
 .main {
@@ -50,7 +87,6 @@ body {
 
 #sidebarMenu {
   position: fixed;
-  left: 0;
   height: 100%;
   width: 100%;
   overflow-y: unset;
@@ -76,7 +112,6 @@ body {
   padding: 20px;
   list-style: none;
   cursor: pointer;
-  font-weight: bold;
   border-top: 1.5px solid rgba(255, 255, 255, 0.15);
   color: #fff;
 }
@@ -125,13 +160,20 @@ input[type=checkbox] {
 }
 
 .sidebarIconToggle {
+  display: none;
   position: fixed;
   top: 22px;
-  left: 15px;
+  right: 15px;
   height: 22px;
   width: 22px;
   cursor: pointer;
   z-index: 100;
+}
+
+@media (max-width: 750px) {
+  .sidebarIconToggle {
+    display: block;
+  }
 }
 
 .spinner {
@@ -144,7 +186,7 @@ input[type=checkbox] {
 .diagonal.one,
 .diagonal.two {
   position: relative;
-  float: left;
+  float: right;
 }
 
 .horizontal,

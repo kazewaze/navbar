@@ -1,5 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@700;800;900&family=Readex+Pro:wght@200;300;400;500;600;700&display=swap');
 
+html {
+  font-size: 16px;
+}
+
+@media screen and (min-width: 320px) {
+  html {
+    font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+  }
+}
+@media screen and (min-width: 1000px) {
+  html {
+    font-size: 22px;
+  }
+}
+
 html,
 body {
   height: 100%;
@@ -53,7 +68,7 @@ ul > li > a {
 }
 
 .nav-links > li > a {
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-weight: bold;
   color: #fff;
 }
@@ -125,7 +140,7 @@ ul > li > a {
 .sidebarMenuInner li a {
   text-transform: none;
   text-decoration: none;
-  font-size: 2rem;
+  font-size: 1.75rem;
   font-weight: bolder;
   color: #fff;
 }
